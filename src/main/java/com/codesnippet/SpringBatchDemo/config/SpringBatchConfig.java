@@ -1,7 +1,11 @@
 package com.codesnippet.SpringBatchDemo.config;
 
+import com.codesnippet.SpringBatchDemo.entity.Person;
+import com.codesnippet.SpringBatchDemo.repository.PersonRepository;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
+
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
@@ -16,10 +20,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.transaction.PlatformTransactionManager;
 
-import com.codesnippet.SpringBatchDemo.entity.Person;
-import com.codesnippet.SpringBatchDemo.repository.PersonRepository;
+import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
 public class SpringBatchConfig {
